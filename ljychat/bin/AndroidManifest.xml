@@ -1,0 +1,82 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ljy.ljychat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.ljy.mychat.xmpp.InitApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ljy_logo_app_lable"
+        android:label="@string/ljy_app_name">
+        
+        <!-- 闪屏页 -->
+        <activity
+            android:name="com.ljy.mychat.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        
+        <activity
+            android:name="com.ljy.mychat.ui.LoginActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.RegisterActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.AddContactActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.AddFriendManagerActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.ChatActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.MoneyActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <receiver android:name="com.ljy.mychat.broadcast.InviteBroadcast">
+            <intent-filter>
+                <action android:name="com.invite"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+
+</manifest>

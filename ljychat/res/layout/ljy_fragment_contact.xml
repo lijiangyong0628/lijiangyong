@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ljy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <com.ljy.mychat.widget.TitleBar
+        android:id="@+id/contact_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ljy:ljyRightImage="@drawable/ljy_add"
+        ljy:ljyTitle="@string/address_book" />
+
+    <ListView 
+        android:id="@+id/contacts_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></ListView>
+    </LinearLayout>
+    <com.ljy.mychat.widget.MySideBar
+        android:id="@+id/sideBar"
+        android:layout_width="30dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginTop="45dp" 
+        android:layout_marginBottom="5dp"/>
+    <!--
+    <include
+           android:id="@+id/title_bar"
+        android:id="@+id/search_bar_view"
+        layout="@layout/em_search_bar_with_padding" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.easemob.easeui.widget.EaseContactList
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+            easemob:ctsListInitialLetterBg="#abc"
+
+        <LinearLayout
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/now_refresh_list" />
+        </LinearLayout>
+    </FrameLayout>
+    -->
+
+</FrameLayout>

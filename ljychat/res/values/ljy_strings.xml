@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="ljy_app_name">ljychat</string>
+	<string name="user_name">username</string>
+	<string name="password">password</string>
+	<string name="register">register</string>
+	<string name="login">login</string>
+	<string name="confirmpassword">confirm password</string>
+	<string name="session">会话</string>
+	<string name="address_book">通讯录</string>
+	<string name="setting">设置</string>
+	<string name="myself">我</string>
+	<string name="button_search">查找</string>
+	<string name="addfriends">添加好友</string>
+	<string name="button_add">添加</string>
+	<string name="applyAndmessage">申请与通知</string>
+	<string name="agree">同意</string>
+	<string name="notify">新消息提醒</string>
+	<string name="newnotify">接收新消息通知</string>
+	<string name="voice">声音</string>
+	<string name="shake">震动</string>
+	<string name="chatset">聊天设置</string>
+	<string name="yangshengqi">使用扬声器播放语音</string>
+	<string name="book_black">通讯录黑名单</string>
+	<string name="title_user_profile">个人资料</string>
+	<string name="diagnose">诊断</string>
+	<string name="button_logout">退出账号</string>
+</resources>

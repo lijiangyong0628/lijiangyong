@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ljy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb" >
+
+    <com.ljy.mychat.widget.TitleBar
+        android:id="@+id/chat_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ljy:ljyLeftImage="@drawable/ljy_mm_title_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_menu"
+        android:layout_below="@id/chat_title_bar" >
+
+    	<android.support.v4.widget.SwipeRefreshLayout
+       	 	android:id="@+id/chat_swipe_layout"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+
+        	<ListView
+            	android:id="@+id/chat_list"
+            	android:layout_width="match_parent"
+           	 	android:layout_height="match_parent"
+            	android:cacheColorHint="#00000000"
+            	android:divider="@null"
+            	android:dividerHeight="5dp"
+            	android:listSelector="#00000000"
+            	android:scrollbarStyle="outsideOverlay"
+            	android:transcriptMode="normal" />
+    	</android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+	<LinearLayout
+	    android:id="@+id/input_menu"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="vertical"
+	    android:layout_marginBottom="3dp"
+	    >
+	    <RelativeLayout 
+	        android:id="@+id/input_rl"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	       	android:background="@drawable/ljy_laylist_input_message"
+	        >
+	        <ImageButton
+	            android:id="@+id/voice_chat"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_marginLeft="5dp"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/ljy_btn_voice_selector"
+	            android:scaleType="centerCrop"
+	            android:onClick="onImageButtonClick"
+	            />
+	        <Button
+	            android:id="@+id/extras_chat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="40dp"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/ljy_btn_send_selector"
+	            android:text="send"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="5dp"
+	            android:onClick="onImageButtonClick"
+	            />
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="45dp"
+	           	android:layout_toLeftOf="@id/extras_chat"
+	            android:layout_toRightOf="@id/voice_chat"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginRight="5dp"
+	            >
+		        <EditText 
+		            android:id="@+id/chat_edit_text"
+		            android:layout_width="match_parent"
+		            android:layout_height="45dp"
+		            android:background="@drawable/ljy_input_bar_bg_active"
+		            android:paddingRight="30dp"
+		            />
+		        <ImageButton
+		            android:id="@+id/emotion_imagebutton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/ljy_chatting_biaoqing_btn_normal"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_marginRight="5dp"
+		            android:onClick="onImageButtonClick"
+		            />
+	        </RelativeLayout>
+	    </RelativeLayout>
+	    <GridView 
+	        android:id="@+id/emothion_griwview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:numColumns="7"
+	        />
+	</LinearLayout>
+
+</RelativeLayout>

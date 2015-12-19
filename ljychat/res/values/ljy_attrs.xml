@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="TitleBar">
+        <attr name="ljyTitle" format="string"/>
+        <attr name="ljyLeftImage" format="reference"/>
+        <attr name="ljyRightImage" format="reference"/>
+        <attr name="ljyBackground" format="color|reference"/>
+    </declare-styleable>
+    
+    <declare-styleable name="ljySwitchButton">
+        <attr name="switchOpenImage" format="reference"/>
+        <attr name="switchCloseImage" format="reference"/>
+        <attr name="switchStatus">
+            <enum name="open" value="0"/>
+            <enum name="close" value="1"/>
+        </attr>
+    </declare-styleable>
+    
+</resources>
