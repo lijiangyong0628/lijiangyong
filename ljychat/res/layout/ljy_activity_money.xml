@@ -103,18 +103,10 @@
 	    android:id="@+id/zhifubao_button"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:text="支付宝充值"
+	    android:text="充值"
 		android:textSize="18sp"
 		android:layout_marginTop="1dp"
-		android:background="@drawable/ljy_button_register_bg"
-	    />
-	<Button 
-	    android:id="@+id/yinhangka_button"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:text="银行卡充值"
-		android:textSize="18sp"
-		android:layout_marginTop="1dp"
+		android:onClick="onPayClick"
 		android:background="@drawable/ljy_button_register_bg"
 	    />
 	<ImageView 

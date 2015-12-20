@@ -71,6 +71,18 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateVisible"/>
         
+        <activity
+            android:name="com.ljy.mychat.ui.AlipayActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
+        <activity
+            android:name="com.ljy.mychat.ui.PayActivity"
+            android:theme="@style/horizontal_slide"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        
         <receiver android:name="com.ljy.mychat.broadcast.InviteBroadcast">
             <intent-filter>
                 <action android:name="com.invite"/>

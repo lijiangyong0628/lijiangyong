@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <RelativeLayout
+        android:id="@+id/ljy_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+
+        <include 
+            layout="@layout/ljy_commom_back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="充值订单"
+            android:textColor="#fff"
+            android:textSize="18sp" 
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+    
+
+
+    <RelativeLayout
+        android:id="@+id/pay_order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ljy_title_1" >
+
+        <RelativeLayout
+            android:id="@+id/order_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="充值账号"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pay_uname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="test1234"
+                android:textColor="#289df1"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/order_name"
+            android:layout_marginTop="1dp"
+            android:background="#fff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="充值金额"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <TextView 
+                android:id="@+id/pay_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#289df1"
+                android:text="48"
+                android:textSize="13sp" 
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_infoer"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/order_number"
+            android:layout_marginTop="1dp"
+            android:background="#fff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="充值信息"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pay_gamemoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="人民币（元）"
+                android:textColor="#289df1"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/order_tv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pay_order_info"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="选择支付方式"
+        android:textColor="#b1b1b1" />
+
+    <RelativeLayout
+        android:id="@+id/pay_choose_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_below="@id/order_tv_choose"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/order_alipay_kuaijie"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/order_alipay_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ljy_alipay_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/order_alipay_icon"
+                android:text="支付宝快捷支付"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/order_alipay_yimg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ljy_ed" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weixin_pay"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/order_alipay_kuaijie"
+            android:layout_marginTop="1dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/order_wx_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ljy_wx_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/order_wx_icon"
+                android:text="微信支付"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/order_wx_yimg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ljy_fu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/card_pay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/weixin_pay"
+            android:layout_marginTop="1dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/order_yl_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ljy_yl_btn_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/order_yl_icon"
+                android:text="网上银行"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/order_yl_yimg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ljy_fu" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/order_youhui_rel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/pay_choose_pay"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="优惠券"
+            android:textColor="#b1b1b1" />
+
+        <TextView
+            android:id="@+id/order_yhq_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="暂无可用优惠券"
+            android:textColor="#ff5757" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/order_youhui_rel"
+        >
+	    <TextView
+	        android:id="@+id/order_yhq_tx"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:text="优惠券使用说明"
+	        android:textColor="#b6b69e" />
+	
+	    <TextView
+	        android:layout_width="20dp"
+	        android:layout_height="20dp"
+	        android:layout_alignBottom="@id/order_yhq_tx"
+	        android:layout_marginRight="5dp"
+	        android:layout_toLeftOf="@id/order_yhq_tx"
+	        android:background="@drawable/ljy_order_w" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ljy_order_bootom_rel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/ljy_order_bootom_lift"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:background="#3d3d3d" >
+
+            <TextView
+                android:id="@+id/pay_order_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="总计 ￥ "
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/order_bootom_price_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/pay_order_money"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ljy_order_bootom_right"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="#56d176"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确认提交"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+</RelativeLayout>
