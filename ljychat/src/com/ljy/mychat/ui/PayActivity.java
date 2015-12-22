@@ -36,7 +36,11 @@ public class PayActivity extends Activity {
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				LiLog.d("start:"+start);
 				if(s.length() == 6){
-					Toast.makeText(PayActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+					if("123456".equals(s.toString())){
+						Toast.makeText(PayActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+					}else{
+						Toast.makeText(PayActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
+					}
 				}
 			}
 			

@@ -20,8 +20,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ljy.ljychat.R;
 import com.ljy.mychat.utils.LiLog;
@@ -264,5 +266,20 @@ public class MainActivity extends FragmentActivity {
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 
+	}
+	
+	private long lastTime;
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			if((System.currentTimeMillis() - lastTime) > 2000){
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				lastTime = System.currentTimeMillis();
+			}else{
+				finish();
+			}
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }	
