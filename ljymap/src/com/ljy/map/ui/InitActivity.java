@@ -42,7 +42,7 @@ public class InitActivity extends Activity{
      // 传入接口事件，离线地图更新会触发该回调
 //        mOfflineMap.init(this);
         //test map
-        //dfldjfl
+        //dfldjflzhecies
         
         
     }  
