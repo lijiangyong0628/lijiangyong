@@ -44,6 +44,7 @@ public class InitActivity extends Activity{
         //test map
         //dfldjfl
         
+        
     }  
     
     OnGetPoiSearchResultListener poiListener = new OnGetPoiSearchResultListener() {
