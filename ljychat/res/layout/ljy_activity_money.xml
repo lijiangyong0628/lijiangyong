@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ljy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+
+        <include 
+            layout="@layout/ljy_commom_back_btn" />
+
+        <TextView
+            android:id="@+id/money_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="钱包"
+            android:textColor="#fff"
+            android:textSize="18sp" 
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="慧慧安全支付"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:layout_below="@id/money_packet" />
+    </RelativeLayout>
+    
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="85dp"
+	    android:background="@android:color/darker_gray"
+	    android:gravity="center"
+	    >
+	    <LinearLayout 
+	        android:id="@+id/yuer_ll"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        >
+	        <ImageView 
+	            android:layout_width="35dp"
+	            android:layout_height="35dp"
+	            android:src="@drawable/ljy_icon_smallmoney"
+	            android:scaleType="centerCrop"
+	            android:background="@android:color/darker_gray"/>
+	        <TextView 
+	            android:layout_width="50dp"
+	            android:layout_height="wrap_content"
+	            android:text="余额"
+	            android:textSize="14sp"
+	            android:gravity="center"
+	            android:textColor="#fff"
+	            />
+	        <TextView 
+	            android:id="@+id/money_count"
+	            android:layout_width="50dp"
+	            android:layout_height="wrap_content"
+	            android:text="1.53"
+	            android:gravity="center"
+	            android:textSize="12sp"
+	            android:textColor="#fff"
+	            />
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_toRightOf="@id/yuer_ll"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:layout_marginLeft="90dp"
+	        >
+	        <ImageView 
+	            android:layout_width="35dp"
+	            android:layout_height="35dp"
+	            android:src="@drawable/ljy_icon_bankcard"
+	            android:scaleType="centerCrop"
+	            android:background="@android:color/darker_gray"/>
+	        <TextView 
+	            android:layout_width="50dp"
+	            android:layout_height="wrap_content"
+	            android:text="银行卡"
+	            android:textSize="14sp"
+	            android:gravity="center"
+	            android:textColor="#fff"
+	            />
+	    </LinearLayout>
+	</RelativeLayout>
+    
+	<Button 
+	    android:id="@+id/zhifubao_button"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="充值"
+		android:textSize="18sp"
+		android:layout_marginTop="1dp"
+		android:onClick="onPayClick"
+		android:background="@drawable/ljy_button_register_bg"
+	    />
+	<ImageView 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:src="@drawable/ljy_icon_choongzhi"
+	    android:scaleType="centerCrop"
+	    />
+
+</LinearLayout>

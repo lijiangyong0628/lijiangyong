@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <RelativeLayout
+        android:id="@+id/ljy_pay_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+
+        <include 
+            layout="@layout/ljy_commom_back_btn" />
+
+        <TextView
+            android:id="@+id/pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付界面"
+            android:textColor="#fff"
+            android:textSize="18sp" 
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+    
+
+
+    <RelativeLayout
+        android:id="@+id/sure_pay_order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ljy_pay_1" >
+
+        <RelativeLayout
+            android:id="@+id/order_name_pay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="账号"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pay_uname_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="test123"
+                android:textColor="#289df1"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_number_pay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/order_name_pay"
+            android:layout_marginTop="1dp"
+            android:background="#fff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="金额"
+                android:textColor="#b1b1b1"
+                android:textSize="16sp" />
+
+            <TextView 
+                android:id="@+id/pay_number_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#289df1"
+                android:text="50.0"
+                android:textSize="13sp" 
+                />
+        </RelativeLayout>
+	</RelativeLayout>
+	 <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/sure_pay_order_info"
+            android:layout_marginTop="1dp"
+            android:gravity="center" >
+        <TextView 
+            android:gravity="center"
+            android:id="@+id/tips_mima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在下面密码框中输入密码"
+            android:textSize="15sp"
+            />
+        
+		<EditText 
+		    android:layout_below="@id/tips_mima"
+		    android:id="@+id/pay_password"
+		    android:layout_width="180dp"
+		    android:layout_height="60dp"
+		    android:password="true"
+		    android:gravity="center"
+		    android:inputType="number"
+		    android:maxLength="6"
+		    android:textColor="#289df1"
+		    android:textSize="30sp"
+		    android:layout_marginTop="10dp"
+		    android:background="@drawable/ljy_button_white"
+		    />
+	</RelativeLayout>
+</RelativeLayout>

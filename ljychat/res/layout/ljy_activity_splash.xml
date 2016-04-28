@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ljy_splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ljy_splash_portrait" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="聊天也是一种乐趣"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:gravity="center" />
+
+</RelativeLayout>
